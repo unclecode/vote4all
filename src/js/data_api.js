@@ -73,15 +73,15 @@ var MemoryDataApi = {
     },
     get_topics: function(callback) {
     	var _this = this;
-        $.getJSON('https://api.mongolab.com/api/1/databases/pycademy_vote4all/collections/topics?apiKey=pqbchKrUy2Hnfoljl6bvmt5qYRUEgWpZ', function(res) {
-            _this.db.topics = _this.db.topics.concat(res)
-            console.log(_this.db.topics)
-            if (callback)
-                callback(_this.db.topics)
-        })
+        // $.getJSON('https://api.mongolab.com/api/1/databases/pycademy_vote4all/collections/topics?apiKey=pqbchKrUy2Hnfoljl6bvmt5qYRUEgWpZ', function(res) {
+        //     _this.db.topics = _this.db.topics.concat(res)
+        //     console.log(_this.db.topics)
+        //     if (callback)
+        //         callback(_this.db.topics)
+        // })
 
-        // if (callback)
-        //     callback(this.db.topics)
+        if (callback)
+            callback(this.db.topics)
     },
     get_topic_id: function(topicid, callback) {
         var res = this.get_topics(function(topics) {
@@ -101,15 +101,15 @@ var MemoryDataApi = {
             _this.db.topics.push(
                 topic
             )
-            $.ajax({
-                url: "https://api.mongolab.com/api/1/databases/pycademy_vote4all/collections/topics?apiKey=pqbchKrUy2Hnfoljl6bvmt5qYRUEgWpZ",
-                data: JSON.stringify(topic),
-                type: "POST",
-                contentType: "application/json",
-                success: function(r) {
-                    console.log('inserted')
-                }
-            });
+            // $.ajax({
+            //     url: "https://api.mongolab.com/api/1/databases/pycademy_vote4all/collections/topics?apiKey=pqbchKrUy2Hnfoljl6bvmt5qYRUEgWpZ",
+            //     data: JSON.stringify(topic),
+            //     type: "POST",
+            //     contentType: "application/json",
+            //     success: function(r) {
+            //         console.log('inserted')
+            //     }
+            // });
 
             if (callback)
                 callback(topic)
