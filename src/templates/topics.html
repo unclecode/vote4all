@@ -1,0 +1,10 @@
+<section class="section container-fluid">
+    <div class="scrollable">
+        <div class="scrollable-content section">
+            <h1 class="page-header">Topics</h1>
+            <div class="list-group">
+                <a ng-repeat="item in topics" href="#/vote?topicid={{item.topicid}}" class="list-group-item"><span ng-bind-html="item.title | unsafe">  </span> <small>{{item.state}}</small></a>
+            </div>
+        </div>
+    </div>
+</section>

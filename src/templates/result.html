@@ -1,0 +1,15 @@
+<section class="section container-fluid">
+    <div class="scrollable">
+        <div class="scrollable-content section">
+            <h1 class="page-header">{{topic.title}} <small>Terminated!</small></h1>
+            <div class="section">
+                <div class="list-group">
+                    <a ng-repeat="item in topic.answers | orderBy :'vote':true" href="" class="list-group-item">
+                        <span class="label label-info">{{item.vote}}</span>
+                        <span class="answer-title">{{item.title}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

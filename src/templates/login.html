@@ -1,0 +1,29 @@
+<section class="section container-fluid">
+    <div class="scrollable ">
+        <div class="scrollable-content section">
+            <form role="form" ng-submit="login()" class="ng-pristine ng-valid ng-valid-email">
+                <fieldset>
+                    <legend>Login</legend>
+                    <div class="form-group has-success has-feedback">
+                        <label>Email</label>
+                        <input type="email" ng-model="user.email" class="form-control ng-pristine ng-valid needsclick ng-valid-email ng-touched" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" ng-model="user.password" class="form-control needsclick" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Remember Me</label>
+                        <ui-switch ng-model="rememberMe" class="ng-pristine ng-untouched ng-valid ng-isolate-scope switch active switch-transition-enabled">
+                            <div class="switch-handle"></div>
+                        </ui-switch>
+                    </div>
+                </fieldset>
+                <hr>
+                <button class="btn btn-primary btn-block">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
